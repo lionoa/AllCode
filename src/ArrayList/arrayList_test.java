@@ -57,6 +57,7 @@ public class arrayList_test {
         System.out.println("arrayList1在arrayList中的索引" + Collections.indexOfSubList(arrayList,arrayList1));
 
         //二分查找
+        //二分查找必须是有序的
         Collections.sort(arrayList);
         System.out.println(arrayList);
         System.out.println("二分查找 7的索引：" + Collections.binarySearch(arrayList,7));
