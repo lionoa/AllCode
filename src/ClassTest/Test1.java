@@ -3,6 +3,7 @@ package ClassTest;
 
 public class Test1 {
     public static void main(String[] args){
+
         Animal animal = new Animal("Mouse", 90);
         animal.eat();
         animal.sleep();
@@ -14,10 +15,11 @@ public class Test1 {
         smallmouse.display();
     }
 }
+
 class Animal{
 
-    private String name;
-    private int id;
+    private final String name;
+    private final int id;
 
     public Animal(String myName, int myId) {
         name = myName;
@@ -25,7 +27,7 @@ class Animal{
     }
 
     public void eat(){
-        System.out.println(name+"正在吃");
+        System.out.printf("%s正在吃",name);
     }
 
     public void sleep(){
@@ -33,7 +35,7 @@ class Animal{
     }
 
     public void introduction() {
-        System.out.println("大家好！我是"         + id + "号" + name + ".");
+        System.out.printf("大家好！我是%d号%s.%n", id, name);
     }
 }
 
